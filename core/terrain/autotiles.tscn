@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c126wly5ovdny"]
+
+[ext_resource type="TileSet" uid="uid://bcj7dcbhge53s" path="res://core/terrain/autotiles.tres" id="1_7l4q0"]
+
+[node name="Autotiles" type="TileMap"]
+tile_set = ExtResource("1_7l4q0")
+format = 2

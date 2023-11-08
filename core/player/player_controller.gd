@@ -1,8 +1,8 @@
 extends CharacterBody2D
 
 
-@export var speed = 3000.0
-@export var aerial_speed = 1800
+@export var speed = 2000.0
+@export var aerial_speed = 1000
 @export var jump_velocity = -400.0
 @export var friction = 10
 
