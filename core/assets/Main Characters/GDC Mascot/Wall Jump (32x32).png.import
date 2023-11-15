@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://23aptxhvybei"
-path="res://.godot/imported/Idle (32x32).png-64693a3680f6a5c16b1ece1c4784500d.ctex"
+uid="uid://6xvrnj6ogdwd"
+path="res://.godot/imported/Wall Jump (32x32).png-94621b1dfc75567eaf4419550fd5825f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://core/assets/Main Characters/Ninja Frog/Idle (32x32).png"
-dest_files=["res://.godot/imported/Idle (32x32).png-64693a3680f6a5c16b1ece1c4784500d.ctex"]
+source_file="res://core/assets/Main Characters/GDC Mascot/Wall Jump (32x32).png"
+dest_files=["res://.godot/imported/Wall Jump (32x32).png-94621b1dfc75567eaf4419550fd5825f.ctex"]
 
 [params]
 

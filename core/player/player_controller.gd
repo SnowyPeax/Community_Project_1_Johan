@@ -1,11 +1,16 @@
 extends CharacterBody2D
 
+class_name player
 
 @export var speed = 2000.0
-@export var aerial_speed = 1000
+@export var aerial_speed = 1700
+@export var max_wallslide_speed = 200
 @export var jump_velocity = -400.0
+@export var wall_jump_velocity = Vector2(400, -300)
 @export var friction = 10
 
+@onready var feet = $Feet
+@export var back : Marker2D
 var dir = Vector2.ZERO
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
@@ -35,3 +40,6 @@ func _input(event):
 func change_animation(animation_name : String):
 	if animations != null:
 		animations.play(animation_name)
+
+func flip_h(_d):
+	$AnimatedSprite2D.scale.x = -1 if _d else 1

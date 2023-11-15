@@ -1,6 +1,107 @@
-[gd_scene load_steps=2 format=3 uid="uid://dmbj41c464tyf"]
+[gd_scene load_steps=8 format=3 uid="uid://dmbj41c464tyf"]
 
 [ext_resource type="Script" path="res://core/player/states/jump.gd" id="1_vf4pp"]
 
+[sub_resource type="Gradient" id="Gradient_60msn"]
+offsets = PackedFloat32Array(0.725926, 1)
+colors = PackedColorArray(1, 1, 1, 0.117647, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_j2lmq"]
+gradient = SubResource("Gradient_60msn")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_t62y7"]
+particle_flag_disable_z = true
+direction = Vector3(1, -0.3, 0)
+spread = 10.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 140.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+damping_min = 100.0
+damping_max = 100.0
+scale_min = 3.0
+scale_max = 3.0
+color = Color(0.94902, 0.65098, 0.368627, 1)
+color_ramp = SubResource("GradientTexture1D_j2lmq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_uwl5m"]
+particle_flag_disable_z = true
+direction = Vector3(-1, -0.3, 0)
+spread = 10.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 140.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+damping_min = 100.0
+damping_max = 100.0
+scale_min = 3.0
+scale_max = 3.0
+color = Color(0.94902, 0.65098, 0.368627, 1)
+color_ramp = SubResource("GradientTexture1D_j2lmq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_ve64w"]
+particle_flag_disable_z = true
+direction = Vector3(0, -1, 0)
+spread = 10.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 140.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+damping_min = 100.0
+damping_max = 100.0
+scale_min = 3.0
+scale_max = 3.0
+color = Color(0.94902, 0.65098, 0.368627, 1)
+color_ramp = SubResource("GradientTexture1D_j2lmq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_1ix4o"]
+particle_flag_disable_z = true
+direction = Vector3(0, 1, 0)
+spread = 10.0
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 100.0
+initial_velocity_max = 140.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+damping_min = 100.0
+damping_max = 100.0
+scale_min = 3.0
+scale_max = 3.0
+color = Color(0.94902, 0.65098, 0.368627, 1)
+color_ramp = SubResource("GradientTexture1D_j2lmq")
+
 [node name="Jump" type="Node"]
 script = ExtResource("1_vf4pp")
+
+[node name="jumpParticles" type="Node2D" parent="."]
+
+[node name="jumpParticlesRight" type="GPUParticles2D" parent="jumpParticles"]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_t62y7")
+lifetime = 0.15
+one_shot = true
+explosiveness = 1.0
+
+[node name="jumpParticlesLeft" type="GPUParticles2D" parent="jumpParticles"]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_uwl5m")
+lifetime = 0.15
+one_shot = true
+explosiveness = 1.0
+
+[node name="jumpParticlesUp" type="GPUParticles2D" parent="jumpParticles"]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_ve64w")
+lifetime = 0.15
+one_shot = true
+explosiveness = 1.0
+
+[node name="jumpParticlesDown" type="GPUParticles2D" parent="jumpParticles"]
+emitting = false
+process_material = SubResource("ParticleProcessMaterial_1ix4o")
+lifetime = 0.15
+one_shot = true
+explosiveness = 1.0

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://jg5xv04rnckv"]
+
+[ext_resource type="Script" path="res://core/player/states/wallslide.gd" id="1_asain"]
+
+[node name="Wallslide" type="Node"]
+script = ExtResource("1_asain")

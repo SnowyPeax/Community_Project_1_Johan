@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d2x6xp5hmnha3"
-path="res://.godot/imported/Run (32x32).png-ae652e400f502c30ee6e09a1bdeb2437.ctex"
+uid="uid://deosxfl7c0wsp"
+path="res://.godot/imported/Hit (32x32).png-640b8cc8afd08a837f8c18ac26e2239f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://core/assets/Main Characters/Ninja Frog/Run (32x32).png"
-dest_files=["res://.godot/imported/Run (32x32).png-ae652e400f502c30ee6e09a1bdeb2437.ctex"]
+source_file="res://core/assets/Main Characters/GDC Mascot/Hit (32x32).png"
+dest_files=["res://.godot/imported/Hit (32x32).png-640b8cc8afd08a837f8c18ac26e2239f.ctex"]
 
 [params]
 

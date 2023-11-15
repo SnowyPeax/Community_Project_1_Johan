@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cj0lk6htbc4a3"
-path="res://.godot/imported/Jump (32x32).png-dc196e01d099fde805af3da9b7eb8140.ctex"
+uid="uid://ctgv8wa7c0pi3"
+path="res://.godot/imported/Fall (32x32).png-096db32dcd8d1de3bfd9f812cb6fc01d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://core/assets/Main Characters/Ninja Frog/Jump (32x32).png"
-dest_files=["res://.godot/imported/Jump (32x32).png-dc196e01d099fde805af3da9b7eb8140.ctex"]
+source_file="res://core/assets/Main Characters/GDC Mascot/Fall (32x32).png"
+dest_files=["res://.godot/imported/Fall (32x32).png-096db32dcd8d1de3bfd9f812cb6fc01d.ctex"]
 
 [params]
 

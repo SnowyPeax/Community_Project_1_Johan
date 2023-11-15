@@ -1,113 +1,135 @@
-[gd_scene load_steps=36 format=3 uid="uid://du7rf3dv64ila"]
+[gd_scene load_steps=43 format=3 uid="uid://du7rf3dv64ila"]
 
-[ext_resource type="Texture2D" uid="uid://23aptxhvybei" path="res://core/assets/Main Characters/Ninja Frog/Idle (32x32).png" id="1_5g7wr"]
 [ext_resource type="Script" path="res://core/player/player_controller.gd" id="1_6husf"]
-[ext_resource type="Texture2D" uid="uid://ctgv8wa7c0pi3" path="res://core/assets/Main Characters/Ninja Frog/Fall (32x32).png" id="2_bey3c"]
-[ext_resource type="Texture2D" uid="uid://d2x6xp5hmnha3" path="res://core/assets/Main Characters/Ninja Frog/Run (32x32).png" id="3_85xpj"]
-[ext_resource type="Texture2D" uid="uid://cj0lk6htbc4a3" path="res://core/assets/Main Characters/Ninja Frog/Jump (32x32).png" id="3_kfudh"]
+[ext_resource type="Texture2D" uid="uid://ctgv8wa7c0pi3" path="res://core/assets/Main Characters/GDC Mascot/Fall (32x32).png" id="2_agavs"]
+[ext_resource type="Texture2D" uid="uid://23aptxhvybei" path="res://core/assets/Main Characters/GDC Mascot/Idle (32x32).png" id="3_s1h2v"]
 [ext_resource type="PackedScene" uid="uid://bweetaw07n750" path="res://core/player/states/state_machine.tscn" id="4_8hcse"]
+[ext_resource type="Texture2D" uid="uid://cj0lk6htbc4a3" path="res://core/assets/Main Characters/GDC Mascot/Jump (32x32).png" id="4_v7khj"]
 [ext_resource type="PackedScene" uid="uid://cjior5el2b4nq" path="res://core/player/states/idle.tscn" id="5_aqoqn"]
+[ext_resource type="Texture2D" uid="uid://d2x6xp5hmnha3" path="res://core/assets/Main Characters/GDC Mascot/Run (32x32).png" id="5_l1u1h"]
+[ext_resource type="Texture2D" uid="uid://6xvrnj6ogdwd" path="res://core/assets/Main Characters/GDC Mascot/Wall Jump (32x32).png" id="6_dte28"]
 [ext_resource type="PackedScene" uid="uid://ogsyk56b2blg" path="res://core/player/states/move.tscn" id="6_r64p6"]
 [ext_resource type="PackedScene" uid="uid://dmbj41c464tyf" path="res://core/player/states/jump.tscn" id="7_c3to6"]
 [ext_resource type="PackedScene" uid="uid://d20wur0m88wxi" path="res://core/player/states/fall.tscn" id="10_ws0dy"]
+[ext_resource type="PackedScene" uid="uid://jg5xv04rnckv" path="res://core/player/states/wallslide.tscn" id="12_pn4sa"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qrcya"]
-atlas = ExtResource("1_5g7wr")
+atlas = ExtResource("3_s1h2v")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_raekr"]
-atlas = ExtResource("1_5g7wr")
+atlas = ExtResource("3_s1h2v")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7y1dh"]
-atlas = ExtResource("1_5g7wr")
+atlas = ExtResource("3_s1h2v")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xc1c5"]
-atlas = ExtResource("1_5g7wr")
+atlas = ExtResource("3_s1h2v")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4fvy5"]
-atlas = ExtResource("1_5g7wr")
+atlas = ExtResource("3_s1h2v")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_t3uxw"]
-atlas = ExtResource("1_5g7wr")
+atlas = ExtResource("3_s1h2v")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pi7qe"]
-atlas = ExtResource("1_5g7wr")
+atlas = ExtResource("3_s1h2v")
 region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uufj2"]
-atlas = ExtResource("1_5g7wr")
+atlas = ExtResource("3_s1h2v")
 region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8oose"]
-atlas = ExtResource("1_5g7wr")
+atlas = ExtResource("3_s1h2v")
 region = Rect2(256, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqu7a"]
-atlas = ExtResource("1_5g7wr")
+atlas = ExtResource("3_s1h2v")
 region = Rect2(288, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4qgpu"]
-atlas = ExtResource("1_5g7wr")
+atlas = ExtResource("3_s1h2v")
 region = Rect2(320, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sb4ny"]
-atlas = ExtResource("3_85xpj")
+atlas = ExtResource("5_l1u1h")
 region = Rect2(0, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k2sey"]
-atlas = ExtResource("3_85xpj")
+atlas = ExtResource("5_l1u1h")
 region = Rect2(32, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lcr33"]
-atlas = ExtResource("3_85xpj")
+atlas = ExtResource("5_l1u1h")
 region = Rect2(64, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_j2ger"]
-atlas = ExtResource("3_85xpj")
+atlas = ExtResource("5_l1u1h")
 region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8i0xq"]
-atlas = ExtResource("3_85xpj")
+atlas = ExtResource("5_l1u1h")
 region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_2cewc"]
-atlas = ExtResource("3_85xpj")
+atlas = ExtResource("5_l1u1h")
 region = Rect2(160, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_neocg"]
-atlas = ExtResource("3_85xpj")
+atlas = ExtResource("5_l1u1h")
 region = Rect2(192, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f7d6b"]
-atlas = ExtResource("3_85xpj")
+atlas = ExtResource("5_l1u1h")
 region = Rect2(224, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cifib"]
-atlas = ExtResource("3_85xpj")
+atlas = ExtResource("5_l1u1h")
 region = Rect2(256, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_maope"]
-atlas = ExtResource("3_85xpj")
+atlas = ExtResource("5_l1u1h")
 region = Rect2(288, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cp4os"]
-atlas = ExtResource("3_85xpj")
+atlas = ExtResource("5_l1u1h")
 region = Rect2(320, 0, 32, 32)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3t2kv"]
-atlas = ExtResource("3_85xpj")
+atlas = ExtResource("5_l1u1h")
 region = Rect2(352, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4raqx"]
+atlas = ExtResource("6_dte28")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4bpyw"]
+atlas = ExtResource("6_dte28")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_01wci"]
+atlas = ExtResource("6_dte28")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mu5tc"]
+atlas = ExtResource("6_dte28")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0o7j"]
+atlas = ExtResource("6_dte28")
+region = Rect2(128, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mi6bj"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_bey3c")
+"texture": ExtResource("2_agavs")
 }],
 "loop": true,
 "name": &"fall",
@@ -153,7 +175,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_kfudh")
+"texture": ExtResource("4_v7khj")
 }],
 "loop": true,
 "name": &"jump",
@@ -199,19 +221,43 @@ animations = [{
 "loop": true,
 "name": &"move",
 "speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4raqx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4bpyw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_01wci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mu5tc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0o7j")
+}],
+"loop": true,
+"name": &"wall_slide",
+"speed": 12.0
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_71xeu"]
-radius = 9.0
-height = 24.0
+radius = 8.0
+height = 22.0
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("back")]
 script = ExtResource("1_6husf")
+back = NodePath("AnimatedSprite2D/back")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_mi6bj")
 animation = &"idle"
 autoplay = "idle"
+
+[node name="back" type="Marker2D" parent="AnimatedSprite2D"]
+position = Vector2(8, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 3)
@@ -228,5 +274,10 @@ default_state = NodePath("Idle")
 
 [node name="Fall" parent="StateMachine" instance=ExtResource("10_ws0dy")]
 
+[node name="Wallslide" parent="StateMachine" instance=ExtResource("12_pn4sa")]
+
 [node name="Camera2D" type="Camera2D" parent="."]
 position_smoothing_enabled = true
+
+[node name="Feet" type="Marker2D" parent="."]
+position = Vector2(0, 15)

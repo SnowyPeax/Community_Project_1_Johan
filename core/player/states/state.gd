@@ -3,7 +3,7 @@ extends Node
 class_name state
 
 var state_machine = null
-var player = null
+var player : player= null
 
 func _ready():
 	exit()
