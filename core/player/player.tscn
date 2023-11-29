@@ -248,6 +248,7 @@ radius = 8.0
 height = 22.0
 
 [node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("back")]
+z_index = 10
 script = ExtResource("1_6husf")
 back = NodePath("AnimatedSprite2D/back")
 

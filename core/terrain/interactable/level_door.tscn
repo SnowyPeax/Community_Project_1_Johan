@@ -1,0 +1,42 @@
+[gd_scene load_steps=6 format=3 uid="uid://byp1lb08f3pk2"]
+
+[ext_resource type="Script" path="res://core/terrain/interactable/level_door.gd" id="1_diiro"]
+[ext_resource type="Texture2D" uid="uid://b43oo2frv3jug" path="res://core/assets/Items/Boxes/Box3/Idle.png" id="1_m1fl5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j53sv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_m1fl5")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_s3ccy"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b0twv"]
+font_size = 8
+font_color = Color(0, 0, 0, 1)
+
+[node name="LevelDoor" type="Area2D"]
+script = ExtResource("1_diiro")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_j53sv")
+animation = &"idle"
+frame_progress = 0.221749
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_s3ccy")
+
+[node name="LevelNameLabel" type="Label" parent="."]
+offset_left = -21.0
+offset_top = -27.0
+offset_right = 19.0
+offset_bottom = -5.0
+label_settings = SubResource("LabelSettings_b0twv")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
