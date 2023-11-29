@@ -28,6 +28,9 @@ func _physics_process(delta):
 	move_and_slide()
 
 func apply_physics(delta):
+	if global_position.y > 500:
+		get_tree().reload_current_scene()
+	
 	#Apply Friction
 	velocity.x *= 1 - (friction * delta)
 	
