@@ -33,6 +33,6 @@ func _physics_process(delta):
 	if !Input.is_action_pressed("jump"):
 		player.velocity.y += player.gravity * delta * 1.3
 	
-	if player.dir:
-		player.flip_h(player.dir.x != 1)
+	if player.dir.x:
+		player.flip_h(player.dir.x < 1)
 	player.velocity.x += player.aerial_speed * player.dir.x * delta
