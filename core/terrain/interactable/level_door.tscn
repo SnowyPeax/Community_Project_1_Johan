@@ -24,11 +24,13 @@ font_color = Color(0, 0, 0, 1)
 script = ExtResource("1_diiro")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -2)
 sprite_frames = SubResource("SpriteFrames_j53sv")
 animation = &"idle"
 frame_progress = 0.221749
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
 shape = SubResource("RectangleShape2D_s3ccy")
 
 [node name="LevelNameLabel" type="Label" parent="."]
