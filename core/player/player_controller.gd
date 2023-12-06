@@ -29,7 +29,7 @@ func _physics_process(delta):
 
 func apply_physics(delta):
 	if global_position.y > 500:
-		get_tree().reload_current_scene()
+		die()
 	
 	#Apply Friction
 	velocity.x *= 1 - (friction * delta)
@@ -39,6 +39,7 @@ func apply_physics(delta):
 
 func die():
 	get_tree().reload_current_scene()
+	Levelmanager.time_elapsed = 0
 
 func _input(event):
 	dir = Input.get_vector("left", "right", "up", "down")
