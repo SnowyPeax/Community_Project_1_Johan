@@ -80,6 +80,7 @@ interact={
 2d_physics/layer_6="player_detection"
 2d_physics/layer_7="enemy"
 2d_physics/layer_8="enemy_detection"
+2d_physics/layer_9="traps"
 
 [rendering]
 

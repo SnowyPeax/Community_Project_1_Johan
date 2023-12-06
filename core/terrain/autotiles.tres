@@ -1,6 +1,7 @@
-[gd_resource type="TileSet" load_steps=3 format=3 uid="uid://bcj7dcbhge53s"]
+[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bcj7dcbhge53s"]
 
 [ext_resource type="Texture2D" uid="uid://ctmhjln2kpepc" path="res://core/assets/Terrain/Terrain (16x16).png" id="1_qwryc"]
+[ext_resource type="PackedScene" uid="uid://bmme7pmuclfim" path="res://core/terrain/dangerous/Spikes.tscn" id="3_vfcpg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5qoi5"]
 texture = ExtResource("1_qwryc")
@@ -900,6 +901,11 @@ texture = ExtResource("1_qwryc")
 20:10/0/physics_layer_0/angular_velocity = 0.0
 20:10/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
+[sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_y7cmc"]
+resource_name = "Traps"
+scenes/1/scene = ExtResource("3_vfcpg")
+scenes/1/display_placeholder = ExtResource("3_vfcpg")
+
 [resource]
 physics_layer_0/collision_layer = 1
 terrain_set_0/mode = 1
@@ -916,3 +922,4 @@ terrain_set_0/terrain_4/color = Color(0.866667, 0.690196, 0.670588, 1)
 terrain_set_0/terrain_5/name = "greenery"
 terrain_set_0/terrain_5/color = Color(0.615686, 0.819608, 0.717647, 1)
 sources/0 = SubResource("TileSetAtlasSource_5qoi5")
+sources/2 = SubResource("TileSetScenesCollectionSource_y7cmc")

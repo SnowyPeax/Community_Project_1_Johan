@@ -37,6 +37,9 @@ func apply_physics(delta):
 	#Apply Gravity
 	velocity.y += gravity * delta
 
+func die():
+	get_tree().reload_current_scene()
+
 func _input(event):
 	dir = Input.get_vector("left", "right", "up", "down")
 
