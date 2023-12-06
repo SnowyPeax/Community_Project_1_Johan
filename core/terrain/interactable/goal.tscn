@@ -1,46 +1,46 @@
 [gd_scene load_steps=14 format=3 uid="uid://c80jml3a5gegk"]
 
-[ext_resource type="Texture2D" uid="uid://c082kxu11bfkm" path="res://core/assets/Items/Checkpoints/End/End (Idle).png" id="1_2yq4h"]
 [ext_resource type="Script" path="res://core/terrain/interactable/goal.gd" id="1_yaps7"]
-[ext_resource type="Texture2D" uid="uid://cv3y4ocb6377u" path="res://core/assets/Items/Checkpoints/End/End (Pressed) (64x64).png" id="2_5wusl"]
+[ext_resource type="Texture2D" uid="uid://c082kxu11bfkm" path="res://core/assets/Checkpoints/End/End (Idle).png" id="2_eykcv"]
+[ext_resource type="Texture2D" uid="uid://cv3y4ocb6377u" path="res://core/assets/Checkpoints/End/End (Pressed) (64x64).png" id="3_2o3oc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fmr33"]
-atlas = ExtResource("2_5wusl")
+atlas = ExtResource("3_2o3oc")
 region = Rect2(0, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sdvpo"]
-atlas = ExtResource("2_5wusl")
+atlas = ExtResource("3_2o3oc")
 region = Rect2(64, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xylq5"]
-atlas = ExtResource("2_5wusl")
+atlas = ExtResource("3_2o3oc")
 region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7va84"]
-atlas = ExtResource("2_5wusl")
+atlas = ExtResource("3_2o3oc")
 region = Rect2(192, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_voejm"]
-atlas = ExtResource("2_5wusl")
+atlas = ExtResource("3_2o3oc")
 region = Rect2(256, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_eg2dd"]
-atlas = ExtResource("2_5wusl")
+atlas = ExtResource("3_2o3oc")
 region = Rect2(320, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ltho8"]
-atlas = ExtResource("2_5wusl")
+atlas = ExtResource("3_2o3oc")
 region = Rect2(384, 0, 64, 64)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vs27t"]
-atlas = ExtResource("2_5wusl")
+atlas = ExtResource("3_2o3oc")
 region = Rect2(448, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_o126l"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_2yq4h")
+"texture": ExtResource("2_eykcv")
 }],
 "loop": false,
 "name": &"idle",
@@ -84,14 +84,12 @@ script = ExtResource("1_yaps7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = -100
-position = Vector2(-8, -24)
 sprite_frames = SubResource("SpriteFrames_o126l")
 animation = &"idle"
 autoplay = "idle"
-centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(24, 16)
+position = Vector2(0, 13.5)
 shape = SubResource("RectangleShape2D_bgbog")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

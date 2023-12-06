@@ -2,7 +2,7 @@ extends state
 
 func _physics_process(delta):
 	if !player.is_on_wall():
-		state_machine.change_to_state("Jump", true)
+		state_machine.change_to_state("Jump")
 	if Input.is_action_just_pressed("jump"):
 		state_machine.change_to_state("Jump")
 	if player.is_on_floor():

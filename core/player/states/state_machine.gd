@@ -11,10 +11,10 @@ func _ready():
 	current_state = default_state
 	current_state.enter()
 
-func change_to_state(new_state : String, disable_on_enter : bool = false):
+func change_to_state(new_state : String):
 	current_state.exit()
 	current_state = get_state(new_state)
-	current_state.enter(disable_on_enter)
+	current_state.enter()
 
 func get_state(state_name : String):
 	return get_node(state_name)
