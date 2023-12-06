@@ -2,7 +2,7 @@ extends state
 
 
 func _physics_process(delta):
-	if player.dir:
+	if player.dir.x:
 		state_machine.change_to_state("Move")
 	if Input.is_action_just_pressed("jump"):
 		state_machine.change_to_state("Jump")
