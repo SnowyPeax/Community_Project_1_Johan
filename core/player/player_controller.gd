@@ -42,6 +42,7 @@ func die():
 
 func _input(event):
 	dir = Input.get_vector("left", "right", "up", "down")
+	dir = Vector2(round(dir.x), round(dir.y))
 
 func change_animation(animation_name : String):
 	if animations != null:

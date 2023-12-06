@@ -34,5 +34,6 @@ func _physics_process(delta):
 		player.velocity.y += player.gravity * delta * 1.3
 	
 	if player.dir.x:
+		print(player.dir)
 		player.flip_h(player.dir.x < 0)
 	player.velocity.x += player.aerial_speed * player.dir.x * delta
