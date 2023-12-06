@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://beeynubmvbh6k" path="res://core/assets/Traps/Spikes/Idle.png" id="1_yh61d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k8hvm"]
-size = Vector2(10, 7)
+size = Vector2(9, 7)
 
 [node name="Spikes" type="Area2D"]
 script = ExtResource("1_bw18e")
@@ -13,7 +13,7 @@ script = ExtResource("1_bw18e")
 texture = ExtResource("1_yh61d")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 4.5)
+position = Vector2(-0.5, 4.5)
 shape = SubResource("RectangleShape2D_k8hvm")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

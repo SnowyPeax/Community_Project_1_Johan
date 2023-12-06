@@ -6,7 +6,7 @@ class_name player
 @export var aerial_speed = 1700
 @export var max_wallslide_speed = 200
 @export var jump_velocity = -400.0
-@export var wall_jump_velocity = Vector2(400, -300)
+@export var wall_jump_velocity = Vector2(400, -330)
 @export var friction = 10
 
 @onready var feet = $Feet

@@ -84,12 +84,14 @@ script = ExtResource("1_yaps7")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 z_index = -100
+position = Vector2(-8, -24)
 sprite_frames = SubResource("SpriteFrames_o126l")
 animation = &"idle"
 autoplay = "idle"
+centered = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 13.5)
+position = Vector2(24, 16)
 shape = SubResource("RectangleShape2D_bgbog")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

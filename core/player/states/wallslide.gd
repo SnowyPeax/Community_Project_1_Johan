@@ -19,4 +19,6 @@ func _physics_process(delta):
 
 
 func on_state_entered():
+	if player.velocity.y > 0:
+		player.velocity.y = 0
 	player.change_animation("wall_slide")

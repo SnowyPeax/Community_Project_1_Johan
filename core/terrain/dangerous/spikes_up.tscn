@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1tq43fffcjtg"]
+
+[ext_resource type="PackedScene" uid="uid://bmme7pmuclfim" path="res://core/terrain/dangerous/Spikes.tscn" id="1_3of1h"]
+
+[node name="SpikesUp" instance=ExtResource("1_3of1h")]
+
+[node name="Sprite2D" parent="." index="0"]
+flip_v = true
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-0.5, -4.5)

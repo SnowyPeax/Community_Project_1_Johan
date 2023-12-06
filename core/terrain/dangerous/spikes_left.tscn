@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://cjsx1l50iowce"]
+
+[ext_resource type="PackedScene" uid="uid://bmme7pmuclfim" path="res://core/terrain/dangerous/Spikes.tscn" id="1_pricp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p2cyu"]
+size = Vector2(7, 9)
+
+[node name="SpikesLeft" instance=ExtResource("1_pricp")]
+
+[node name="Sprite2D" parent="." index="0"]
+rotation = 1.5708
+
+[node name="CollisionShape2D" parent="." index="1"]
+position = Vector2(-4.5, -0.5)
+shape = SubResource("RectangleShape2D_p2cyu")
