@@ -38,10 +38,11 @@ func apply_physics(delta):
 	velocity.y += gravity * delta
 
 func die():
-	get_tree().reload_current_scene()
+	print("Player died!")
+	Levelmanager.reload_scene()
 	Levelmanager.time_elapsed = 0
 
-func _input(event):
+func _input(_event):
 	dir = Input.get_vector("left", "right", "up", "down")
 	dir = Vector2(round(dir.x), round(dir.y))
 

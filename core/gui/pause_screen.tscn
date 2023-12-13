@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://fwruj0v5dudu"]
+
+[ext_resource type="Script" path="res://core/gui/pause_screen.gd" id="1_wsjlv"]
+
+[node name="Pause screen" type="CanvasLayer"]
+process_mode = 3
+layer = 3
+script = ExtResource("1_wsjlv")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(480, 270)
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.262745, 0.262745, 0.309804, 0.411765)
+
+[node name="CenterContainer" type="CenterContainer" parent="."]
+custom_minimum_size = Vector2(480, 270)
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
+layout_mode = 2
+
+[node name="LevelNameLabel" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+text = "LEVELNAME"
+horizontal_alignment = 1
+
+[node name="TimeLabel2" type="Label" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+horizontal_alignment = 1
+
+[node name="Button2" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Restart Level"
+
+[node name="Button" type="Button" parent="CenterContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+text = "Return to lobby"
+
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]

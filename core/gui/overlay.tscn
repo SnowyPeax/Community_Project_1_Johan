@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://djfumufr3hun3"]
+
+[ext_resource type="Script" path="res://core/gui/overlay.gd" id="1_lm0g0"]
+
+[node name="Overlay" type="CanvasLayer"]
+script = ExtResource("1_lm0g0")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 5.0
+offset_top = 6.0
+offset_right = 97.0
+offset_bottom = 31.0
+text = "time"

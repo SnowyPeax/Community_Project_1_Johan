@@ -1,11 +1,11 @@
 [gd_resource type="TileSet" load_steps=10 format=3 uid="uid://bcj7dcbhge53s"]
 
 [ext_resource type="Texture2D" uid="uid://ctmhjln2kpepc" path="res://core/assets/Terrain/Terrain (16x16).png" id="1_qwryc"]
-[ext_resource type="PackedScene" path="res://core/terrain/dangerous/spikes_left.tscn" id="3_kf2gd"]
+[ext_resource type="PackedScene" uid="uid://cjsx1l50iowce" path="res://core/terrain/dangerous/spikes_left.tscn" id="3_kf2gd"]
 [ext_resource type="PackedScene" uid="uid://c80jml3a5gegk" path="res://core/terrain/interactable/goal.tscn" id="3_v2bub"]
 [ext_resource type="PackedScene" uid="uid://bmme7pmuclfim" path="res://core/terrain/dangerous/Spikes.tscn" id="3_vfcpg"]
-[ext_resource type="PackedScene" path="res://core/terrain/dangerous/spikes_right.tscn" id="4_gm48l"]
-[ext_resource type="PackedScene" path="res://core/terrain/dangerous/spikes_up.tscn" id="5_lr8lh"]
+[ext_resource type="PackedScene" uid="uid://kim4eay54ba8" path="res://core/terrain/dangerous/spikes_right.tscn" id="4_gm48l"]
+[ext_resource type="PackedScene" uid="uid://b1tq43fffcjtg" path="res://core/terrain/dangerous/spikes_up.tscn" id="5_lr8lh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5qoi5"]
 texture = ExtResource("1_qwryc")
