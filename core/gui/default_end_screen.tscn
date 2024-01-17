@@ -104,10 +104,10 @@ size_flags_horizontal = 4
 text = "Return to lobby"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-autoplay = "fade_in"
 libraries = {
 "": SubResource("AnimationLibrary_nmm7k")
 }
+autoplay = "fade_in"
 
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Button2" to="." method="_on_button_2_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/Button" to="." method="_on_button_pressed"]
