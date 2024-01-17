@@ -2,8 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://bv2o3xgv1pqg0" path="res://core/scenes/base_level.tscn" id="1_ksnub"]
 [ext_resource type="PackedScene" uid="uid://byp1lb08f3pk2" path="res://core/terrain/interactable/level_door.tscn" id="2_48j3t"]
-[ext_resource type="PackedScene" uid="uid://c1u7b3fc5cp3s" path="res://HalfdanMaps/HalfdanKaizo.tscn" id="4_8d32l"]
-[ext_resource type="PackedScene" uid="uid://bwl2ujms63ekw" path="res://SnowyPeax/johan_kaizo.tscn" id="4_kdxxo"]
+[ext_resource type="PackedScene" uid="uid://c1u7b3fc5cp3s" path="res://user/HalfdanMaps/HalfdanKaizo.tscn" id="4_8d32l"]
+[ext_resource type="PackedScene" uid="uid://bwl2ujms63ekw" path="res://user/SnowyPeax/johan_kaizo.tscn" id="4_kdxxo"]
 
 [node name="Lobby" instance=ExtResource("1_ksnub")]
 
