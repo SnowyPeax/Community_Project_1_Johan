@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://cwj2002hkpdlj"]
 
-[ext_resource type="Script" path="res://SnowyPeax/mechanics/rotator.gd" id="1_48uop"]
+[ext_resource type="Script" path="res://user/SnowyPeax/mechanics/rotator.gd" id="1_48uop"]
 [ext_resource type="Texture2D" uid="uid://bv3hrfgy8logb" path="res://core/assets/Items/Fruits/Apple.png" id="2_w4rgq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6fmg"]

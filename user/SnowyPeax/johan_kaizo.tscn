@@ -2,7 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://bv2o3xgv1pqg0" path="res://core/scenes/base_level.tscn" id="1_p6v65"]
 [ext_resource type="PackedScene" uid="uid://c80jml3a5gegk" path="res://core/terrain/interactable/goal.tscn" id="2_g5xgl"]
-[ext_resource type="PackedScene" uid="uid://cwj2002hkpdlj" path="res://SnowyPeax/mechanics/rotator.tscn" id="3_if5a2"]
+[ext_resource type="PackedScene" uid="uid://cwj2002hkpdlj" path="res://user/SnowyPeax/mechanics/rotator.tscn" id="3_if5a2"]
 
 [node name="Johan Kaizo" instance=ExtResource("1_p6v65")]
 
@@ -26,3 +26,26 @@ new_rotation = 180
 
 [node name="Goal" parent="." index="7" instance=ExtResource("2_g5xgl")]
 position = Vector2(208, -28)
+
+[connection signal="body_entered" from="Autotiles/SpikesRight" to="Autotiles/SpikesRight" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21227" to="Autotiles/@Area2D@21227" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/Spikes" to="Autotiles/Spikes" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/SpikesUp" to="Autotiles/SpikesUp" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21228" to="Autotiles/@Area2D@21228" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21229" to="Autotiles/@Area2D@21229" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21230" to="Autotiles/@Area2D@21230" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21231" to="Autotiles/@Area2D@21231" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21232" to="Autotiles/@Area2D@21232" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21233" to="Autotiles/@Area2D@21233" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21234" to="Autotiles/@Area2D@21234" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21235" to="Autotiles/@Area2D@21235" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21236" to="Autotiles/@Area2D@21236" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21237" to="Autotiles/@Area2D@21237" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21238" to="Autotiles/@Area2D@21238" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21239" to="Autotiles/@Area2D@21239" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21240" to="Autotiles/@Area2D@21240" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21241" to="Autotiles/@Area2D@21241" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21242" to="Autotiles/@Area2D@21242" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21243" to="Autotiles/@Area2D@21243" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21244" to="Autotiles/@Area2D@21244" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@21245" to="Autotiles/@Area2D@21245" method="_on_body_entered" flags=18]
