@@ -29,9 +29,11 @@ func _physics_process(delta):
 		state_machine.change_to_state("Fall")
 	if player.is_on_wall():
 		state_machine.change_to_state("Wallslide")
-		
-	if !Input.is_action_pressed("jump"):
-		player.velocity.y += player.gravity * delta * 1.3
+	
+	if Input.is_action_pressed("down"):
+		player.velocity.y += player.gravity * delta * player.fastfallmult
+	elif !Input.is_action_pressed("jump"):
+		player.velocity.y += player.gravity * delta * player.medfallmult
 	
 	if player.dir.x:
 		player.flip_h(player.dir.x < 0)

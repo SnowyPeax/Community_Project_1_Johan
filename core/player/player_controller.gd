@@ -7,7 +7,10 @@ class_name player
 @export var max_wallslide_speed = 200
 @export var jump_velocity = -400.0
 @export var wall_jump_velocity = Vector2(400, -330)
+@export var good_wall_jump_velocity = Vector2(475, -350)
 @export var friction = 10
+@export var fastfallmult = 1.5
+@export var medfallmult = 1.15
 
 @onready var feet = $Feet
 @export var back : Marker2D
