@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://clfj7pvqgkwva"]
+[gd_scene load_steps=6 format=3 uid="uid://clfj7pvqgkwva"]
 
 [ext_resource type="PackedScene" uid="uid://bv2o3xgv1pqg0" path="res://core/scenes/base_level.tscn" id="1_ksnub"]
 [ext_resource type="PackedScene" uid="uid://byp1lb08f3pk2" path="res://core/terrain/interactable/level_door.tscn" id="2_48j3t"]
 [ext_resource type="PackedScene" uid="uid://c1u7b3fc5cp3s" path="res://user/HalfdanMaps/HalfdanKaizo.tscn" id="4_8d32l"]
 [ext_resource type="PackedScene" uid="uid://bwl2ujms63ekw" path="res://user/SnowyPeax/johan_kaizo.tscn" id="4_kdxxo"]
+[ext_resource type="PackedScene" uid="uid://c5ui2nqg0do3b" path="res://core/scenes/level_door_generator.tscn" id="5_f7x18"]
 
 [node name="Lobby" instance=ExtResource("1_ksnub")]
 
@@ -22,3 +23,7 @@ level_name = "Halfdan Kaizo"
 position = Vector2(224, 40)
 level = ExtResource("4_kdxxo")
 level_name = "Johan Kaizo"
+
+[node name="LevelDoorGenerator" parent="." index="4" instance=ExtResource("5_f7x18")]
+position = Vector2(101, 15)
+path = "res://user/"

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5ui2nqg0do3b"]
+
+[ext_resource type="Script" path="res://core/scenes/level_door_generator.gd" id="1_g38a7"]
+
+[node name="LevelDoorGenerator" type="Node2D"]
+script = ExtResource("1_g38a7")
