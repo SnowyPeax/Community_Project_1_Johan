@@ -1,8 +1,7 @@
 extends Area2D
 
-@export var jump_force = -500
-
 func _on_body_entered(body):
-	if body.name == "Player":
-		body.velocity.y = -1000
+	if body.name == "Player" and self.visible:
+		self.visible = false
 		print("banana?!")
+		get_tree().get_root().get_node("BaseLevel/CanvasLayer/Label").count += 1
