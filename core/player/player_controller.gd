@@ -22,6 +22,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var states = $StateMachine
 @onready var animations = $AnimatedSprite2D
 
+func _ready():
+	Levelmanager.player = self
 
 func apply_force(force : Vector2):
 	velocity += force

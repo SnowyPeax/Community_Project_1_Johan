@@ -10,13 +10,17 @@ var overlay = preload("res://core/gui/overlay.tscn")
 var time_elapsed = 0
 var is_timing = false
 
+var player = null
+
 func _ready():
 	get_tree().get_root().add_child.call_deferred(overlay.instantiate())
-
 
 func _process(delta):
 	if is_timing:
 		time_elapsed += delta
+
+func get_player():
+	return player
 
 func change_scene(scene : PackedScene):
 	get_tree().change_scene_to_packed(scene)
