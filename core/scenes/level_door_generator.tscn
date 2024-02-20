@@ -1,6 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://c5ui2nqg0do3b"]
+[gd_scene load_steps=3 format=3 uid="uid://c5ui2nqg0do3b"]
 
 [ext_resource type="Script" path="res://core/scenes/level_door_generator.gd" id="1_g38a7"]
+[ext_resource type="PackedScene" uid="uid://byp1lb08f3pk2" path="res://core/terrain/interactable/level_door.tscn" id="2_jlgcc"]
 
 [node name="LevelDoorGenerator" type="Node2D"]
 script = ExtResource("1_g38a7")
+level_door_origin = ExtResource("2_jlgcc")
