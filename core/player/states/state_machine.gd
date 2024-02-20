@@ -12,8 +12,11 @@ func _ready():
 	current_state.enter()
 
 func change_to_state(new_state : String):
+	change_to_state_node(get_state(new_state))
+
+func change_to_state_node(new_state : state):
 	current_state.exit()
-	current_state = get_state(new_state)
+	current_state = new_state
 	current_state.enter()
 
 func get_state(state_name : String):
