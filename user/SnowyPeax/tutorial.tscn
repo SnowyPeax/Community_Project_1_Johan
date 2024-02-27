@@ -38,21 +38,3 @@ offset_top = 64.0
 offset_right = 984.0
 offset_bottom = 112.0
 text = "Can you guess how to ascend?"
-
-[connection signal="body_entered" from="Autotiles/Spikes" to="Autotiles/Spikes" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40069" to="Autotiles/@Area2D@40069" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40070" to="Autotiles/@Area2D@40070" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40071" to="Autotiles/@Area2D@40071" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40072" to="Autotiles/@Area2D@40072" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40073" to="Autotiles/@Area2D@40073" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40074" to="Autotiles/@Area2D@40074" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40075" to="Autotiles/@Area2D@40075" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40076" to="Autotiles/@Area2D@40076" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40077" to="Autotiles/@Area2D@40077" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40078" to="Autotiles/@Area2D@40078" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40079" to="Autotiles/@Area2D@40079" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40080" to="Autotiles/@Area2D@40080" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40130" to="Autotiles/@Area2D@40130" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40131" to="Autotiles/@Area2D@40131" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40132" to="Autotiles/@Area2D@40132" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@40133" to="Autotiles/@Area2D@40133" method="_on_body_entered" flags=18]
