@@ -1,4 +1,4 @@
-[gd_resource type="TileSet" load_steps=10 format=3 uid="uid://bcj7dcbhge53s"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://bcj7dcbhge53s"]
 
 [ext_resource type="Texture2D" uid="uid://ctmhjln2kpepc" path="res://core/assets/Terrain/Terrain (16x16).png" id="1_qwryc"]
 [ext_resource type="PackedScene" uid="uid://cjsx1l50iowce" path="res://core/terrain/dangerous/spikes_left.tscn" id="3_kf2gd"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://bmme7pmuclfim" path="res://core/terrain/dangerous/Spikes.tscn" id="3_vfcpg"]
 [ext_resource type="PackedScene" uid="uid://kim4eay54ba8" path="res://core/terrain/dangerous/spikes_right.tscn" id="4_gm48l"]
 [ext_resource type="PackedScene" uid="uid://b1tq43fffcjtg" path="res://core/terrain/dangerous/spikes_up.tscn" id="5_lr8lh"]
+[ext_resource type="PackedScene" uid="uid://c4k4og8ohm3ng" path="res://core/terrain/interactable/checkpoint.tscn" id="7_mbtb4"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5qoi5"]
 texture = ExtResource("1_qwryc")
@@ -915,6 +916,7 @@ scenes/5/scene = ExtResource("5_lr8lh")
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_6fcqx"]
 resource_name = "Interactables"
 scenes/1/scene = ExtResource("3_v2bub")
+scenes/2/scene = ExtResource("7_mbtb4")
 
 [resource]
 physics_layer_0/collision_layer = 1

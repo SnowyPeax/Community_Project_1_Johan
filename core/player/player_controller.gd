@@ -23,7 +23,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 @onready var animations = $AnimatedSprite2D
 
 func _ready():
-	Levelmanager.player = self
+	Levelmanager._player = self
 
 func apply_force(force : Vector2):
 	velocity += force
@@ -43,9 +43,7 @@ func apply_physics(delta):
 	velocity.y += gravity * delta
 
 func die():
-	print("Player died!")
-	Levelmanager.reload_scene()
-	Levelmanager.time_elapsed = 0
+	Levelmanager.reload_from_checkpoint()
 
 func _input(_event):
 	dir = Input.get_vector("left", "right", "up", "down")

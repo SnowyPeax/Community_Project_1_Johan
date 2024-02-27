@@ -10,7 +10,9 @@ var overlay = preload("res://core/gui/overlay.tscn")
 var time_elapsed = 0
 var is_timing = false
 
-var player = null
+var _player = null
+var _checkpoint_pos = null
+var _checkpoint = null
 
 func _ready():
 	get_tree().get_root().add_child.call_deferred(overlay.instantiate())
@@ -20,16 +22,33 @@ func _process(delta):
 		time_elapsed += delta
 
 func get_player():
-	return player
+	return _player
+
+func get_checkpoint_position():
+	return _checkpoint_pos
+
+func get_checkpoint():
+	return _checkpoint
+
+func _reset_checkpoint():
+	_checkpoint_pos = null
+	_checkpoint = null
 
 func change_scene(scene : PackedScene):
 	get_tree().change_scene_to_packed(scene)
+	_reset_checkpoint()
 
 func go_to_lobby():
 	get_tree().change_scene_to_packed(home_scene)
+	_reset_checkpoint()
+
+func reload_from_checkpoint():
+	get_tree().reload_current_scene()
 
 func reload_scene():
+	_reset_checkpoint()
 	get_tree().reload_current_scene()
+	time_elapsed = 0
 
 func display_default_end_screen():
 	var end_screen = load("res://core/gui/default_end_screen.tscn").instantiate()
