@@ -15,7 +15,9 @@ func _physics_process(delta):
 	else:
 		var direction = player.position - position
 		
-		velocity = direction.normalized() * speed
+		$Sprite2D.rotation = direction.angle() - 0.5 * PI
+		
+		velocity += direction.normalized() * speed * delta
 		
 		if move_and_slide():
 			velocity = get_real_velocity().normalized() * velocity.length()
