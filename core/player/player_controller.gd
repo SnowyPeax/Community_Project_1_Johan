@@ -28,7 +28,7 @@ func _ready():
 func apply_force(force : Vector2):
 	velocity += force
 
-func _physics_process(delta):
+func _process(delta):
 	apply_physics(delta)
 	move_and_slide()
 
