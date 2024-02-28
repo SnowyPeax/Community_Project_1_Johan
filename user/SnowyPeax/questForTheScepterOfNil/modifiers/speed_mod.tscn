@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcx2s67fe2tqb"]
+
+[ext_resource type="Script" path="res://user/SnowyPeax/questForTheScepterOfNil/modifiers/speed_mod.gd" id="1_jn5o0"]
+[ext_resource type="Texture2D" uid="uid://cqur8758tan5c" path="res://user/SnowyPeax/questForTheScepterOfNil/assets/items/purpleArrow.png" id="2_bj4dn"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1ver4"]
+radius = 6.0
+height = 14.0
+
+[node name="SpeedMod" type="Area2D"]
+script = ExtResource("1_jn5o0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_bj4dn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_1ver4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

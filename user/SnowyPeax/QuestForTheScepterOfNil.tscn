@@ -1,7 +1,9 @@
-[gd_scene load_steps=3 format=3 uid="uid://llwgolfnn255"]
+[gd_scene load_steps=5 format=3 uid="uid://llwgolfnn255"]
 
 [ext_resource type="PackedScene" uid="uid://bv2o3xgv1pqg0" path="res://core/scenes/base_level.tscn" id="1_u6oy1"]
 [ext_resource type="Texture2D" uid="uid://btuupdyno6oog" path="res://core/assets/Background/Gray.png" id="2_1n8bu"]
+[ext_resource type="PackedScene" uid="uid://bcx2s67fe2tqb" path="res://user/SnowyPeax/questForTheScepterOfNil/modifiers/speed_mod.tscn" id="3_ca4as"]
+[ext_resource type="PackedScene" uid="uid://mehykytwwth5" path="res://user/SnowyPeax/questForTheScepterOfNil/modifiers/jump_mod.tscn" id="4_53vky"]
 
 [node name="QuestEntrance" instance=ExtResource("1_u6oy1")]
 
@@ -29,11 +31,26 @@ offset_right = 22.0
 offset_bottom = -73.0
 text = "Choose a starting item!"
 
-[connection signal="body_entered" from="Autotiles/@Area2D@39947" to="Autotiles/@Area2D@39947" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@39948" to="Autotiles/@Area2D@39948" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@39949" to="Autotiles/@Area2D@39949" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@39950" to="Autotiles/@Area2D@39950" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@39962" to="Autotiles/@Area2D@39962" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@39963" to="Autotiles/@Area2D@39963" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@39964" to="Autotiles/@Area2D@39964" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@39965" to="Autotiles/@Area2D@39965" method="_on_body_entered" flags=18]
+[node name="SpeedMod" parent="." index="4" instance=ExtResource("3_ca4as")]
+position = Vector2(-168, 0)
+
+[node name="SpeedMod2" parent="." index="5" instance=ExtResource("3_ca4as")]
+position = Vector2(168, 0)
+
+[node name="JumpMod" parent="." index="6" instance=ExtResource("4_53vky")]
+position = Vector2(64, -64)
+
+[node name="JumpMod2" parent="." index="7" instance=ExtResource("4_53vky")]
+position = Vector2(-48, -56)
+
+[node name="JumpMod3" parent="." index="8" instance=ExtResource("4_53vky")]
+position = Vector2(0, -64)
+
+[connection signal="body_entered" from="Autotiles/Spikes" to="Autotiles/Spikes" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@127404" to="Autotiles/@Area2D@127404" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@127405" to="Autotiles/@Area2D@127405" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@127406" to="Autotiles/@Area2D@127406" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@127407" to="Autotiles/@Area2D@127407" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@127408" to="Autotiles/@Area2D@127408" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@127409" to="Autotiles/@Area2D@127409" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@127410" to="Autotiles/@Area2D@127410" method="_on_body_entered" flags=18]
