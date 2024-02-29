@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://locdhkjfl1wv"]
+
+[ext_resource type="Texture2D" uid="uid://beb5osk4h50lm" path="res://user/SnowyPeax/questForTheScepterOfNil/assets/weapons/bow.png" id="1_12wng"]
+[ext_resource type="Script" path="res://user/SnowyPeax/questForTheScepterOfNil/weapons/bow.gd" id="1_dgvfj"]
+[ext_resource type="PackedScene" uid="uid://cnomdvahxwq2h" path="res://user/SnowyPeax/questForTheScepterOfNil/weapons/arrow.tscn" id="2_1mson"]
+
+[node name="Bow" type="Node2D"]
+script = ExtResource("1_dgvfj")
+projectile = ExtResource("2_1mson")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7, 0)
+texture = ExtResource("1_12wng")

@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3 uid="uid://cnomdvahxwq2h"]
+
+[ext_resource type="Script" path="res://user/SnowyPeax/questForTheScepterOfNil/weapons/arrow.gd" id="1_bllx7"]
+[ext_resource type="Texture2D" uid="uid://llt6hbwkpbom" path="res://user/SnowyPeax/questForTheScepterOfNil/assets/weapons/arrow.png" id="1_hsy5j"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tcbap"]
+size = Vector2(15, 3)
+
+[sub_resource type="Gradient" id="Gradient_250br"]
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_riddj"]
+gradient = SubResource("Gradient_250br")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_j1886"]
+particle_flag_disable_z = true
+direction = Vector3(-1, 0, 0)
+gravity = Vector3(0, 0, 0)
+initial_velocity_min = 10.0
+initial_velocity_max = 30.0
+angular_velocity_min = -50.0
+angular_velocity_max = 50.0
+orbit_velocity_min = 0.0
+orbit_velocity_max = 0.0
+color_ramp = SubResource("GradientTexture1D_riddj")
+
+[node name="Arrow" type="Area2D"]
+script = ExtResource("1_bllx7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_tcbap")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2, 0)
+texture = ExtResource("1_hsy5j")
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+position = Vector2(7, 0)
+amount = 10
+process_material = SubResource("ParticleProcessMaterial_j1886")
+trail_lifetime = 0.07
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

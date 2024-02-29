@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://llwgolfnn255"]
+[gd_scene load_steps=7 format=3 uid="uid://llwgolfnn255"]
 
 [ext_resource type="PackedScene" uid="uid://bv2o3xgv1pqg0" path="res://core/scenes/base_level.tscn" id="1_u6oy1"]
 [ext_resource type="Texture2D" uid="uid://btuupdyno6oog" path="res://core/assets/Background/Gray.png" id="2_1n8bu"]
 [ext_resource type="PackedScene" uid="uid://bcx2s67fe2tqb" path="res://user/SnowyPeax/questForTheScepterOfNil/modifiers/speed_mod.tscn" id="3_ca4as"]
+[ext_resource type="PackedScene" uid="uid://locdhkjfl1wv" path="res://user/SnowyPeax/questForTheScepterOfNil/weapons/bow.tscn" id="3_vulwn"]
 [ext_resource type="PackedScene" uid="uid://mehykytwwth5" path="res://user/SnowyPeax/questForTheScepterOfNil/modifiers/jump_mod.tscn" id="4_53vky"]
+[ext_resource type="PackedScene" uid="uid://bv06kiud6rppn" path="res://user/SnowyPeax/questForTheScepterOfNil/items/weapon_pickup.tscn" id="5_e66hg"]
 
 [node name="QuestEntrance" instance=ExtResource("1_u6oy1")]
 
@@ -46,11 +48,15 @@ position = Vector2(-48, -56)
 [node name="JumpMod3" parent="." index="8" instance=ExtResource("4_53vky")]
 position = Vector2(0, -64)
 
+[node name="WeaponPickup" parent="." index="9" instance=ExtResource("5_e66hg")]
+position = Vector2(-128, -36)
+weapon = ExtResource("3_vulwn")
+
 [connection signal="body_entered" from="Autotiles/Spikes" to="Autotiles/Spikes" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@127404" to="Autotiles/@Area2D@127404" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@127405" to="Autotiles/@Area2D@127405" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@127406" to="Autotiles/@Area2D@127406" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@127407" to="Autotiles/@Area2D@127407" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@127408" to="Autotiles/@Area2D@127408" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@127409" to="Autotiles/@Area2D@127409" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@127410" to="Autotiles/@Area2D@127410" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@44224" to="Autotiles/@Area2D@44224" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@44225" to="Autotiles/@Area2D@44225" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@44226" to="Autotiles/@Area2D@44226" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@44227" to="Autotiles/@Area2D@44227" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@44228" to="Autotiles/@Area2D@44228" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@44229" to="Autotiles/@Area2D@44229" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@44230" to="Autotiles/@Area2D@44230" method="_on_body_entered" flags=18]
