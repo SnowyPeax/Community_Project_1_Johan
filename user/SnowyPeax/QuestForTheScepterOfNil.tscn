@@ -1,11 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://llwgolfnn255"]
+[gd_scene load_steps=10 format=3 uid="uid://llwgolfnn255"]
 
 [ext_resource type="PackedScene" uid="uid://bv2o3xgv1pqg0" path="res://core/scenes/base_level.tscn" id="1_u6oy1"]
 [ext_resource type="Texture2D" uid="uid://btuupdyno6oog" path="res://core/assets/Background/Gray.png" id="2_1n8bu"]
 [ext_resource type="PackedScene" uid="uid://bcx2s67fe2tqb" path="res://user/SnowyPeax/questForTheScepterOfNil/modifiers/speed_mod.tscn" id="3_ca4as"]
 [ext_resource type="PackedScene" uid="uid://locdhkjfl1wv" path="res://user/SnowyPeax/questForTheScepterOfNil/weapons/bow.tscn" id="3_vulwn"]
+[ext_resource type="PackedScene" uid="uid://caun14mlk0cs0" path="res://user/SnowyPeax/questForTheScepterOfNil/weapons/sword.tscn" id="3_xnk1p"]
 [ext_resource type="PackedScene" uid="uid://mehykytwwth5" path="res://user/SnowyPeax/questForTheScepterOfNil/modifiers/jump_mod.tscn" id="4_53vky"]
 [ext_resource type="PackedScene" uid="uid://bv06kiud6rppn" path="res://user/SnowyPeax/questForTheScepterOfNil/items/weapon_pickup.tscn" id="5_e66hg"]
+[ext_resource type="Texture2D" uid="uid://beb5osk4h50lm" path="res://user/SnowyPeax/questForTheScepterOfNil/assets/weapons/bow.png" id="7_tloal"]
+[ext_resource type="Texture2D" uid="uid://bnf82vnxggeql" path="res://user/SnowyPeax/questForTheScepterOfNil/assets/weapons/sword.png" id="9_sftfq"]
 
 [node name="QuestEntrance" instance=ExtResource("1_u6oy1")]
 
@@ -26,12 +29,12 @@ size_flags_horizontal = 0
 bbcode_enabled = true
 text = "[rainbow freq=1.0 sat=0.8 val=0.8]Quest for the Scepter of Nil[/rainbow]"
 
-[node name="ChooseItem" type="RichTextLabel" parent="Labels" index="1"]
+[node name="ChooseWeapon" type="RichTextLabel" parent="Labels" index="1"]
 offset_left = -218.0
 offset_top = -106.0
-offset_right = 22.0
+offset_right = 87.0
 offset_bottom = -73.0
-text = "Choose a starting item!"
+text = "Choose a starting weapon!"
 
 [node name="SpeedMod" parent="." index="4" instance=ExtResource("3_ca4as")]
 position = Vector2(-168, 0)
@@ -51,12 +54,18 @@ position = Vector2(0, -64)
 [node name="WeaponPickup" parent="." index="9" instance=ExtResource("5_e66hg")]
 position = Vector2(-128, -36)
 weapon = ExtResource("3_vulwn")
+sprite = ExtResource("7_tloal")
+
+[node name="WeaponPickup2" parent="." index="10" instance=ExtResource("5_e66hg")]
+position = Vector2(120, -38)
+weapon = ExtResource("3_xnk1p")
+sprite = ExtResource("9_sftfq")
 
 [connection signal="body_entered" from="Autotiles/Spikes" to="Autotiles/Spikes" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@44224" to="Autotiles/@Area2D@44224" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@44225" to="Autotiles/@Area2D@44225" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@44226" to="Autotiles/@Area2D@44226" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@44227" to="Autotiles/@Area2D@44227" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@44228" to="Autotiles/@Area2D@44228" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@44229" to="Autotiles/@Area2D@44229" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@44230" to="Autotiles/@Area2D@44230" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@114588" to="Autotiles/@Area2D@114588" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@114589" to="Autotiles/@Area2D@114589" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@114590" to="Autotiles/@Area2D@114590" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@114591" to="Autotiles/@Area2D@114591" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@114592" to="Autotiles/@Area2D@114592" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@114593" to="Autotiles/@Area2D@114593" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@114594" to="Autotiles/@Area2D@114594" method="_on_body_entered" flags=18]
