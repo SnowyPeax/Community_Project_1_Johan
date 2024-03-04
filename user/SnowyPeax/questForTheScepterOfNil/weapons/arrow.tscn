@@ -25,6 +25,7 @@ orbit_velocity_max = 0.0
 color_ramp = SubResource("GradientTexture1D_riddj")
 
 [node name="Arrow" type="Area2D"]
+collision_mask = 3
 script = ExtResource("1_bllx7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

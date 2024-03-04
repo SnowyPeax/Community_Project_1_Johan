@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://llwgolfnn255"]
+[gd_scene load_steps=11 format=3 uid="uid://llwgolfnn255"]
 
 [ext_resource type="PackedScene" uid="uid://bv2o3xgv1pqg0" path="res://core/scenes/base_level.tscn" id="1_u6oy1"]
 [ext_resource type="Texture2D" uid="uid://btuupdyno6oog" path="res://core/assets/Background/Gray.png" id="2_1n8bu"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bv06kiud6rppn" path="res://user/SnowyPeax/questForTheScepterOfNil/items/weapon_pickup.tscn" id="5_e66hg"]
 [ext_resource type="Texture2D" uid="uid://beb5osk4h50lm" path="res://user/SnowyPeax/questForTheScepterOfNil/assets/weapons/bow.png" id="7_tloal"]
 [ext_resource type="Texture2D" uid="uid://bnf82vnxggeql" path="res://user/SnowyPeax/questForTheScepterOfNil/assets/weapons/sword.png" id="9_sftfq"]
+[ext_resource type="PackedScene" uid="uid://c4asio4hyfp13" path="res://user/SnowyPeax/questForTheScepterOfNil/enemies/sniffer_bird.tscn" id="10_o00bh"]
 
 [node name="QuestEntrance" instance=ExtResource("1_u6oy1")]
 
@@ -61,11 +62,14 @@ position = Vector2(120, -38)
 weapon = ExtResource("3_xnk1p")
 sprite = ExtResource("9_sftfq")
 
+[node name="SnifferBird" parent="." index="11" instance=ExtResource("10_o00bh")]
+position = Vector2(-84, -22)
+
 [connection signal="body_entered" from="Autotiles/Spikes" to="Autotiles/Spikes" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@114588" to="Autotiles/@Area2D@114588" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@114589" to="Autotiles/@Area2D@114589" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@114590" to="Autotiles/@Area2D@114590" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@114591" to="Autotiles/@Area2D@114591" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@114592" to="Autotiles/@Area2D@114592" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@114593" to="Autotiles/@Area2D@114593" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@114594" to="Autotiles/@Area2D@114594" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@84214" to="Autotiles/@Area2D@84214" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@84215" to="Autotiles/@Area2D@84215" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@84216" to="Autotiles/@Area2D@84216" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@84217" to="Autotiles/@Area2D@84217" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@84218" to="Autotiles/@Area2D@84218" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@84219" to="Autotiles/@Area2D@84219" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@84220" to="Autotiles/@Area2D@84220" method="_on_body_entered" flags=18]

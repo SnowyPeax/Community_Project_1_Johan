@@ -1,0 +1,75 @@
+[gd_scene load_steps=8 format=3 uid="uid://c4asio4hyfp13"]
+
+[ext_resource type="Script" path="res://user/SnowyPeax/questForTheScepterOfNil/enemies/sniffer_bird.gd" id="1_1l6w1"]
+[ext_resource type="Texture2D" uid="uid://oo5gct40eh0" path="res://user/SnowyPeax/questForTheScepterOfNil/assets/enemies/SnifferBird (32x32).png" id="1_wu6ib"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q1v3i"]
+radius = 8.0
+height = 22.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_t0fcp"]
+radius = 14.0
+height = 28.0
+
+[sub_resource type="Animation" id="Animation_0me3l"]
+resource_name = "fly"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 0]
+}
+
+[sub_resource type="Animation" id="Animation_twtb4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fcyyp"]
+_data = {
+"RESET": SubResource("Animation_twtb4"),
+"fly": SubResource("Animation_0me3l")
+}
+
+[node name="SnifferBird" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_1l6w1")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_q1v3i")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wu6ib")
+hframes = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_t0fcp")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_fcyyp")
+}
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
