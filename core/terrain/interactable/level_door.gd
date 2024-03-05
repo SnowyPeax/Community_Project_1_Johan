@@ -1,5 +1,6 @@
 extends Area2D
 
+class_name LevelDoor
 
 @export var level : PackedScene
 @export var level_name : String

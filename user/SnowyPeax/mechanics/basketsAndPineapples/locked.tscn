@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bwpp0p0jmopyx"]
+
+[ext_resource type="Script" path="res://user/SnowyPeax/mechanics/basketsAndPineapples/locked.gd" id="1_ixomb"]
+[ext_resource type="Texture2D" uid="uid://b43oo2frv3jug" path="res://core/assets/Items/Boxes/Box3/Idle.png" id="2_2pfyl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2s0k"]
+size = Vector2(32, 20)
+
+[node name="Locked" type="StaticBody2D"]
+script = ExtResource("1_ixomb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-8, 0)
+texture = ExtResource("2_2pfyl")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(8, 0)
+texture = ExtResource("2_2pfyl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_h2s0k")
