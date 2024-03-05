@@ -66,8 +66,9 @@ func get_time_elapsed():
 	return round(time_elapsed * 100) / 100
 
 func start_time():
+	if _checkpoint_pos == null:
+		time_elapsed = 0
 	is_timing = true
-	time_elapsed = 0
 
 func stop_time():
 	is_timing = false
