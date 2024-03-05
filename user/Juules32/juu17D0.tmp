@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://djqg5qif2wi6v"]
+
+[ext_resource type="PackedScene" uid="uid://bv2o3xgv1pqg0" path="res://core/scenes/base_level.tscn" id="1_g8jkq"]
+[ext_resource type="PackedScene" uid="uid://cy5vohyceu8gx" path="res://user/Juules32/mechanics/JumpPad.tscn" id="2_wyfrf"]
+[ext_resource type="PackedScene" uid="uid://cxvh2frxcj0d0" path="res://user/Juules32/mechanics/Banana.tscn" id="3_sby3u"]
+[ext_resource type="Script" path="res://user/Juules32/Label.gd" id="4_5ps5u"]
+
+[node name="BaseLevel" instance=ExtResource("1_g8jkq")]
+
+[node name="Player" parent="." index="1"]
+position = Vector2(225, 147)
+
+[node name="Autotiles" parent="." index="2"]
+position = Vector2(240, 135)
+layer_0/tile_data = PackedInt32Array(196616, 458752, 6, 131080, 458752, 4, 196615, 458752, 6, 131079, 458752, 4, 196614, 458752, 6, 131078, 458752, 4, 196613, 458752, 6, 131077, 458752, 4, 196612, 458752, 6, 131076, 458752, 4, 196611, 458752, 6, 131075, 458752, 4, 196610, 458752, 6, 131074, 458752, 4, 196609, 458752, 6, 131073, 458752, 4, 196608, 458752, 6, 131072, 458752, 4, 458762, 524288, 6, 393226, 524288, 4, 458761, 458752, 6, 393225, 458752, 4, 458760, 458752, 6, 393224, 458752, 4, 458759, 458752, 6, 393223, 458752, 4, 458758, 458752, 6, 393222, 458752, 4, 458757, 458752, 6, 393221, 458752, 4, 458756, 458752, 6, 393220, 458752, 4, 458755, 458752, 6, 393219, 458752, 4, 458754, 393216, 6, 393218, 393216, 4, 65542, 2, 65536, 262143, 458752, 6, 196607, 458752, 4, 262142, 458752, 6, 196606, 458752, 4, 262141, 458752, 6, 196605, 589824, 5, 131069, 524288, 5, 65533, 524288, 5, -3, 524288, 5, -65539, 524288, 5, -131075, 524288, 5, 262140, 393216, 6, 196604, 393216, 5, 131068, 393216, 5, 65532, 393216, 5, -4, 393216, 5, -65540, 393216, 5, -131076, 393216, 5, -196604, 524288, 6, -262140, 524288, 4, -196605, 393216, 6, -262141, 393216, 4, 65539, 2, 65536, 65540, 2, 65536, 65541, 2, 65536, 65538, 2, 65536, 196621, 524288, 6, 131085, 524288, 4, 196620, 458752, 6, 131084, 458752, 4, 196619, 458752, 6, 131083, 458752, 4, 196618, 458752, 6, 131082, 458752, 4, 196617, 458752, 6, 131081, 458752, 4, -524282, 524288, 6, -589818, 524288, 4, -524283, 458752, 6, -589819, 458752, 4, -524284, 458752, 6, -589820, 458752, 4, -524285, 458752, 6, -589821, 458752, 4, -524286, 458752, 6, -589822, 458752, 4, -524287, 458752, 6, -589823, 458752, 4, -524288, 458752, 6, -589824, 458752, 4, -458753, 458752, 6, -524289, 458752, 4, -458754, 458752, 6, -524290, 458752, 4, -458755, 589824, 4, -524291, 458752, 4, -458756, 393216, 5, -524292, 393216, 4, -196611, 524288, 5, -262147, 524288, 5, -327683, 524288, 5, -393219, 524288, 5, -196612, 393216, 5, -262148, 393216, 5, -327684, 393216, 5, -393220, 393216, 5, -524275, 524288, 6, -589811, 524288, 4, -524276, 458752, 6, -589812, 458752, 4, -524277, 458752, 6, -589813, 458752, 4, -524278, 458752, 6, -589814, 458752, 4, -524279, 393216, 6, -589815, 393216, 4, -262131, 524288, 6, -327667, 524288, 4, -262132, 393216, 6, -327668, 393216, 4, 65545, 2, 65536, 65546, 2, 65536, 65547, 2, 65536, 65548, 2, 65536, 65549, 2, 65536)
+
+[node name="JumpPad" parent="." index="3" instance=ExtResource("2_wyfrf")]
+position = Vector2(367, 167)
+jump_force = -600
+
+[node name="Banana" parent="." index="4" instance=ExtResource("3_sby3u")]
+position = Vector2(263, 159)
+
+[node name="Banana2" parent="." index="5" instance=ExtResource("3_sby3u")]
+position = Vector2(256, 77)
+
+[node name="Banana3" parent="." index="6" instance=ExtResource("3_sby3u")]
+position = Vector2(229, 105)
+
+[node name="Banana4" parent="." index="7" instance=ExtResource("3_sby3u")]
+position = Vector2(355, 96)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." index="8"]
+
+[node name="Label" type="Label" parent="CanvasLayer" index="0"]
+offset_left = 26.0
+offset_top = 18.0
+offset_right = 80.0
+offset_bottom = 40.0
+script = ExtResource("4_5ps5u")
+
+[connection signal="body_entered" from="Autotiles/Spikes" to="Autotiles/Spikes" method="_on_body_entered"]
+[connection signal="body_entered" from="Autotiles/@Area2D@56351" to="Autotiles/@Area2D@56351" method="_on_body_entered"]
+[connection signal="body_entered" from="Autotiles/@Area2D@56352" to="Autotiles/@Area2D@56352" method="_on_body_entered"]
+[connection signal="body_entered" from="Autotiles/@Area2D@56353" to="Autotiles/@Area2D@56353" method="_on_body_entered"]
+[connection signal="body_entered" from="Autotiles/@Area2D@56354" to="Autotiles/@Area2D@56354" method="_on_body_entered"]
+[connection signal="body_entered" from="Autotiles/@Area2D@56355" to="Autotiles/@Area2D@56355" method="_on_body_entered"]
+[connection signal="body_entered" from="Autotiles/@Area2D@56356" to="Autotiles/@Area2D@56356" method="_on_body_entered"]
+[connection signal="body_entered" from="Autotiles/@Area2D@56357" to="Autotiles/@Area2D@56357" method="_on_body_entered"]
+[connection signal="body_entered" from="Autotiles/@Area2D@56358" to="Autotiles/@Area2D@56358" method="_on_body_entered"]
+[connection signal="body_entered" from="Autotiles/@Area2D@56359" to="Autotiles/@Area2D@56359" method="_on_body_entered"]
