@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cfmrufd2w4bc6"]
+
+[ext_resource type="Script" path="res://user/SnowyPeax/questForTheScepterOfNil/weapons/weapon_manager.gd" id="1_ivmv8"]
+
+[node name="WeaponManager" type="Node2D"]
+script = ExtResource("1_ivmv8")

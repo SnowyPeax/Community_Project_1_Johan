@@ -15,5 +15,5 @@ func _on_body_entered(body):
 	if body == player:
 		var weapon_instance = weapon.instantiate()
 		weapon_instance.position += Vector2(0, 4)
-		player.add_child(weapon_instance)
+		player.get_node("WeaponManager").equip(weapon_instance)
 		queue_free()

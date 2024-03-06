@@ -18,7 +18,6 @@ func calculate_damage():
 
 func _on_body_entered(body):
 	if body.has_method("take_damage"):
-		print(calculate_damage())
 		body.take_damage(calculate_damage())
 	
 	if body != Levelmanager.get_player():

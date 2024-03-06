@@ -66,6 +66,7 @@ disabled = true
 texture = ExtResource("1_0n2ly")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+speed_scale = 2.0
 libraries = {
 "": SubResource("AnimationLibrary_ig11p")
 }

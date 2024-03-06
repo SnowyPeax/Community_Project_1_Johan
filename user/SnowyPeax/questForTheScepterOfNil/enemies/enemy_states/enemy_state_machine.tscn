@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://dn7bffwf7cw3f"]
+
+[ext_resource type="Script" path="res://user/SnowyPeax/questForTheScepterOfNil/enemies/enemy_states/enemy_state_machine.gd" id="1_31tbj"]
+
+[node name="EnemyStateMachine" type="Node"]
+script = ExtResource("1_31tbj")

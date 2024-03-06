@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c6pjgpt1hvk33"]
+
+[ext_resource type="Script" path="res://user/SnowyPeax/questForTheScepterOfNil/enemies/enemy_states/watch.gd" id="1_kgcwn"]
+
+[node name="Watch" type="Node"]
+script = ExtResource("1_kgcwn")
