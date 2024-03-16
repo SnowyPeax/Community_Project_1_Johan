@@ -28,8 +28,8 @@ func _process(delta):
 	move_and_slide()
 
 func apply_physics(delta):
-	if global_position.y > 500 or global_position.y < -500 or global_position.x > 500 or global_position.x < -500:
-		die()
+	# if global_position.y > 500 or global_position.y < -500 or global_position.x > 500 or global_position.x < -500:
+	#   die()
 	
 	#Apply Friction
 	if y_gravity:
@@ -72,7 +72,9 @@ func _physics_process(delta):
 	velocity.x += abs(current_gravity.y) * speed * dir.x * delta
 	velocity.y += abs(current_gravity.x) * speed * dir.x * delta
 
-func rotate_gravity(right_way):
+func rotate_gravity(right_way, pos):
+	velocity = Vector2.ZERO
+	position = pos
 	#$AnimatedSprite2D.position = Vector2.ZERO
 	
 	if right_way:
@@ -117,7 +119,7 @@ func flip_h(_d):
 func flip_v(_d):
 	if y_gravity:
 		$AnimatedSprite2D.scale.y = -1 if _d else 1
-		$AnimatedSprite2D.position.y = 6 if _d else 0
+		$AnimatedSprite2D.position.y = 12 if _d else 0
 	else:
 		$AnimatedSprite2D.scale.x = -1 if _d else 1
 

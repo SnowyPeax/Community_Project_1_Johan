@@ -24,7 +24,7 @@ func _process(delta):
 
 func _on_rotator_body_entered(body):
 	if body == player and can_rotate_player:
-		player.rotate_gravity(right_way)
+		player.rotate_gravity(right_way, position)
 		can_rotate_player = false 
 		timer.start() 
 		
