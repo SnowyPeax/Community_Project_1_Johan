@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://cn25ethtgovom"]
 
-[ext_resource type="Script" path="res://user/AlbertLevels/ArrowBooster.gd" id="1_6nvjt"]
+[ext_resource type="Script" path="res://user/AlbertLevels/Mechanics/arrow_booster.gd" id="1_1n02q"]
 [ext_resource type="Texture2D" uid="uid://bygducup7drrx" path="res://core/assets/Items/DirectionPusher.png" id="2_r8sl8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t6fmg"]
@@ -32,7 +32,7 @@ color_ramp = SubResource("GradientTexture1D_jc5ff")
 
 [node name="Arrow" type="Area2D"]
 position = Vector2(0, 62)
-script = ExtResource("1_6nvjt")
+script = ExtResource("1_1n02q")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-2, 0)
