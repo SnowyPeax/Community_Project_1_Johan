@@ -2,7 +2,7 @@ extends StaticBody2D
 
 @export var projectile : PackedScene
 @export var firing_speed = 10
-@export var range = 350
+@export var range = 150
 @onready var player = Levelmanager.get_player()
 
 
