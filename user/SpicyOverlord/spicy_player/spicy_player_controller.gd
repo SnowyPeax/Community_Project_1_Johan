@@ -85,22 +85,10 @@ func rotate_gravity(right_way):
 	else:
 		rotation_degrees = 0
 
-		flip_h(right_way and current_gravity.y == 1)
-		#flip_v(current_gravity.y != 1)
-
-		#flip_h(current_gravity.x == 1)
-
-
-
-	#if y_gravity:
-		#flip_h(current_gravity.y == -1)
-	#else:
-		#flip_h(current_gravity.x == 1)
-		
-	#if y_gravity:
-	#	flip_h(dir.x != 1)
-	#else:
-	#	flip_v(dir.x == 1)
+	if right_way:
+		flip_h(current_gravity.y != 1)
+	else:
+		flip_v(current_gravity.x != 1)
 	
 	y_gravity = not y_gravity
 

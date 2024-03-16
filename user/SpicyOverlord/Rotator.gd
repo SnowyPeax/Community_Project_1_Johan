@@ -11,7 +11,7 @@ func _ready():
 	player = Levelmanager.get_player()
 	
 	add_child(timer)
-	timer.wait_time = 1.0
+	timer.wait_time = 0.5
 	timer.one_shot = true
 	timer.connect("timeout", _on_Timer_timeout)
 
