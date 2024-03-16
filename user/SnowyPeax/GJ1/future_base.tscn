@@ -1,8 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://by8wss2ef6bk1"]
-
-[ext_resource type="PackedScene" uid="uid://bv2o3xgv1pqg0" path="res://core/scenes/base_level.tscn" id="1_k2esf"]
-
-[node name="FutureBase" instance=ExtResource("1_k2esf")]
-
-[node name="Autotiles" parent="." index="2"]
-layer_0/tile_data = PackedInt32Array(131073, 131072, 1, 65537, 131072, 0, 131072, 65536, 1, 65536, 65536, 0, 196607, 65536, 1, 131071, 65536, 0, 196606, 0, 1, 131070, 0, 0, 196609, 131072, 2, 196608, 65536, 2, 262143, 65536, 2, 262142, 0, 2)
