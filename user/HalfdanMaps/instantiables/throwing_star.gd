@@ -3,9 +3,10 @@ extends Area2D
 @export var collectable : PackedScene
 
 
-var speed = 800
+var speed = 500
 var direction = Vector2.RIGHT
-
+var drops = false
+var friendly = false
 
 var last_delta = 0
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -19,11 +20,12 @@ func _process(delta):
 func _on_timer_timeout():
 	queue_free()
 
-
+var droppable = true
 func _on_body_entered(body):
-	if body.name == "Player":
-		pass
-	else:
+	if body.name == "Player" and not friendly:
+		body.get_node("DamageHandler").damage(1)
+	elif drops and droppable:
+		droppable = false
 		var c = collectable.instantiate()
 		c.global_position = global_position - (speed * direction * last_delta * 1)
 		

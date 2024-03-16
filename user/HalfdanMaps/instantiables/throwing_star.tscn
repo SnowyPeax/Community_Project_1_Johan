@@ -1,8 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://dqr3fmynvyong"]
+[gd_scene load_steps=19 format=3 uid="uid://dqr3fmynvyong"]
 
 [ext_resource type="Script" path="res://user/HalfdanMaps/instantiables/throwing_star.gd" id="1_kiotr"]
 [ext_resource type="PackedScene" uid="uid://c72lak84q4bir" path="res://user/HalfdanMaps/instantiables/throwing_star_collectable.tscn" id="2_c4foo"]
+[ext_resource type="Texture2D" uid="uid://dn7furl7oxnxt" path="res://user/HalfdanMaps/assets/throwing_star_Smeared.png" id="4_3pxae"]
 [ext_resource type="Texture2D" uid="uid://lp4h1mkgy18n" path="res://user/HalfdanMaps/assets/throwing_star.png" id="4_dicjx"]
+[ext_resource type="Texture2D" uid="uid://dj8uxwl3bocar" path="res://user/HalfdanMaps/assets/throwing_star1.png" id="4_js1tc"]
+[ext_resource type="Texture2D" uid="uid://cyewovb7yv4ul" path="res://user/HalfdanMaps/assets/throwing_star2.png" id="5_r3bjn"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vkggx"]
 radius = 8.0
@@ -13,6 +16,14 @@ region = Rect2(0, 0, 24, 24)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_srqgu"]
 atlas = ExtResource("4_dicjx")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c8kk5"]
+atlas = ExtResource("4_3pxae")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nfe6e"]
+atlas = ExtResource("4_3pxae")
 region = Rect2(24, 0, 24, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ukxuq"]
@@ -27,7 +38,44 @@ animations = [{
 "loop": true,
 "name": &"default",
 "speed": 32.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c8kk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nfe6e")
+}],
+"loop": true,
+"name": &"smeared",
+"speed": 32.0
 }]
+
+[sub_resource type="Gradient" id="Gradient_l0id4"]
+colors = PackedColorArray(0.646029, 0.646029, 0.646029, 0.341176, 1, 1, 1, 0)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_g5sa8"]
+gradient = SubResource("Gradient_l0id4")
+
+[sub_resource type="Curve" id="Curve_7fum3"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 0.21978), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_73rgq"]
+curve = SubResource("Curve_7fum3")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_6eyjm"]
+particle_flag_disable_z = true
+gravity = Vector3(0, 0, 0)
+scale_curve = SubResource("CurveTexture_73rgq")
+color_ramp = SubResource("GradientTexture1D_g5sa8")
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_f75u7"]
+frames = 2
+speed_scale = 32.0
+frame_0/texture = ExtResource("4_js1tc")
+frame_1/texture = ExtResource("5_r3bjn")
+frame_1/duration = 1.0
 
 [node name="ThrowingStar" type="Area2D"]
 collision_layer = 0
@@ -45,10 +93,15 @@ autostart = true
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ukxuq")
-autoplay = "default"
-frame_progress = 0.804458
+animation = &"smeared"
+autoplay = "smeared"
 
-[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 4
+process_material = SubResource("ParticleProcessMaterial_6eyjm")
+texture = SubResource("AnimatedTexture_f75u7")
+lifetime = 0.2
+preprocess = 0.2
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

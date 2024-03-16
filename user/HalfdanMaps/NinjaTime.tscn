@@ -1,16 +1,24 @@
-[gd_scene load_steps=6 format=3 uid="uid://b4npbw4spiffm"]
+[gd_scene load_steps=9 format=3 uid="uid://b4npbw4spiffm"]
 
 [ext_resource type="PackedScene" uid="uid://bv2o3xgv1pqg0" path="res://core/scenes/base_level.tscn" id="1_bi6di"]
 [ext_resource type="Script" path="res://user/HalfdanMaps/scripts/QuickCam.gd" id="2_s3tr4"]
 [ext_resource type="Script" path="res://user/HalfdanMaps/scripts/ThrowingStarsManager.gd" id="2_x5lqx"]
 [ext_resource type="PackedScene" uid="uid://dqr3fmynvyong" path="res://user/HalfdanMaps/instantiables/throwing_star.tscn" id="3_llq83"]
+[ext_resource type="Script" path="res://user/HalfdanMaps/scripts/DamageHandler.gd" id="4_yimat"]
 [ext_resource type="Texture2D" uid="uid://cua55hjebi75r" path="res://icon.svg" id="5_pbjsr"]
+[ext_resource type="Texture2D" uid="uid://dj8uxwl3bocar" path="res://user/HalfdanMaps/assets/throwing_star1.png" id="6_bd6xy"]
+[ext_resource type="PackedScene" uid="uid://bpwpwxp70me6h" path="res://user/HalfdanMaps/ninjaboss/ninja_boss.tscn" id="7_nhn11"]
 
 [node name="BaseLevel" instance=ExtResource("1_bi6di")]
 
-[node name="ThrowingStars" type="Node2D" parent="Player" index="5"]
+[node name="ThrowingStars" type="Node2D" parent="Player" index="5" node_paths=PackedStringArray("counter")]
 script = ExtResource("2_x5lqx")
 throwing_star = ExtResource("3_llq83")
+counter = NodePath("../../CanvasLayer/MarginContainer/HBoxContainer/ThrowingStarCounter")
+
+[node name="DamageHandler" type="Node2D" parent="Player" index="6" node_paths=PackedStringArray("hp_vis")]
+script = ExtResource("4_yimat")
+hp_vis = NodePath("../../CanvasLayer/MarginContainer/HBoxContainer")
 
 [node name="Autotiles" parent="." index="2"]
 position = Vector2(-32, 72)
@@ -34,34 +42,43 @@ grow_horizontal = 0
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer/MarginContainer" index="0"]
 layout_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="0"]
+[node name="hp1" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="0"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 texture = ExtResource("5_pbjsr")
 expand_mode = 4
 
-[node name="TextureRect2" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="1"]
+[node name="hp2" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="1"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 texture = ExtResource("5_pbjsr")
 expand_mode = 4
 
-[node name="TextureRect3" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="2"]
+[node name="hp3" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="2"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 texture = ExtResource("5_pbjsr")
 expand_mode = 4
 
-[node name="TextureRect4" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="3"]
+[node name="hp4" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="3"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
 texture = ExtResource("5_pbjsr")
 expand_mode = 4
 
-[node name="ThrowingStarCounter" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer" index="4"]
+[node name="throwing_star_icon" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="4"]
+custom_minimum_size = Vector2(22, 0)
+layout_mode = 2
+texture = ExtResource("6_bd6xy")
+expand_mode = 4
+
+[node name="ThrowingStarCounter" type="Label" parent="CanvasLayer/MarginContainer/HBoxContainer" index="5"]
 custom_minimum_size = Vector2(0, 24)
 layout_mode = 2
 text = ": 00
 "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="NinjaBoss" parent="." index="5" instance=ExtResource("7_nhn11")]
+position = Vector2(0, -8)
