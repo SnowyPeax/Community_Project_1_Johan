@@ -17,10 +17,13 @@ func _ready():
 
 func _process(delta):
 	if can_rotate_player:
+		var rotate_distance = delta * 50
 		if right_way:
-			rotate(delta * 2)
+			rotation_degrees -= rotate_distance
+			#rotate(rotate_distance)
 		else:
-			rotate(-delta * 2)
+			rotation_degrees += rotate_distance
+			#rotate(-rotate_distance)
 
 func _on_rotator_body_entered(body):
 	if body == player and can_rotate_player:
