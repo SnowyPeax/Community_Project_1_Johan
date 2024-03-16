@@ -23,7 +23,7 @@ func _on_timer_timeout():
 var droppable = true
 func _on_body_entered(body):
 	if body.name == "Player" and not friendly:
-		body.get_node("DamageHandler").damage(1)
+		body.get_node("DamageHandler").damage(2)
 	elif drops and droppable:
 		droppable = false
 		var c = collectable.instantiate()
@@ -32,4 +32,7 @@ func _on_body_entered(body):
 		c.apply_force(-speed * direction * last_delta * 1000 + Vector2(0, -10000))
 		get_tree().root.add_child(c)
 		queue_free()
-		
+
+func _on_area_shape_entered(area_rid, area, area_shape_index, local_shape_index):
+	if area.name == "NinjaBoss" and friendly:
+		area.damage(1)

@@ -1,15 +1,43 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4npbw4spiffm"]
+[gd_scene load_steps=12 format=3 uid="uid://b4npbw4spiffm"]
 
 [ext_resource type="PackedScene" uid="uid://bv2o3xgv1pqg0" path="res://core/scenes/base_level.tscn" id="1_bi6di"]
+[ext_resource type="Texture2D" uid="uid://bjet3n631u7lu" path="res://user/HalfdanMaps/assets/GDC_NinjaCat_BG.png" id="2_hxqhv"]
 [ext_resource type="Script" path="res://user/HalfdanMaps/scripts/QuickCam.gd" id="2_s3tr4"]
 [ext_resource type="Script" path="res://user/HalfdanMaps/scripts/ThrowingStarsManager.gd" id="2_x5lqx"]
 [ext_resource type="PackedScene" uid="uid://dqr3fmynvyong" path="res://user/HalfdanMaps/instantiables/throwing_star.tscn" id="3_llq83"]
 [ext_resource type="Script" path="res://user/HalfdanMaps/scripts/DamageHandler.gd" id="4_yimat"]
-[ext_resource type="Texture2D" uid="uid://cua55hjebi75r" path="res://icon.svg" id="5_pbjsr"]
 [ext_resource type="Texture2D" uid="uid://dj8uxwl3bocar" path="res://user/HalfdanMaps/assets/throwing_star1.png" id="6_bd6xy"]
+[ext_resource type="Texture2D" uid="uid://cqdkn1b7m473c" path="res://user/HalfdanMaps/assets/GDC_player_heart.png" id="7_gy5d4"]
 [ext_resource type="PackedScene" uid="uid://bpwpwxp70me6h" path="res://user/HalfdanMaps/ninjaboss/ninja_boss.tscn" id="7_nhn11"]
 
-[node name="BaseLevel" instance=ExtResource("1_bi6di")]
+[sub_resource type="Animation" id="Animation_3pup1"]
+resource_name = "hit"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("..:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(100, 100, 100, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8egyb"]
+_data = {
+"hit": SubResource("Animation_3pup1")
+}
+
+[node name="NinjaTime" instance=ExtResource("1_bi6di")]
+
+[node name="Background" parent="." index="0"]
+texture = ExtResource("2_hxqhv")
+
+[node name="Player" parent="." index="1"]
+jump_velocity = -450.0
 
 [node name="ThrowingStars" type="Node2D" parent="Player" index="5" node_paths=PackedStringArray("counter")]
 script = ExtResource("2_x5lqx")
@@ -19,6 +47,11 @@ counter = NodePath("../../CanvasLayer/MarginContainer/HBoxContainer/ThrowingStar
 [node name="DamageHandler" type="Node2D" parent="Player" index="6" node_paths=PackedStringArray("hp_vis")]
 script = ExtResource("4_yimat")
 hp_vis = NodePath("../../CanvasLayer/MarginContainer/HBoxContainer")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Player/DamageHandler" index="0"]
+libraries = {
+"": SubResource("AnimationLibrary_8egyb")
+}
 
 [node name="Autotiles" parent="." index="2"]
 position = Vector2(-32, 72)
@@ -45,25 +78,25 @@ layout_mode = 2
 [node name="hp1" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="0"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
-texture = ExtResource("5_pbjsr")
+texture = ExtResource("7_gy5d4")
 expand_mode = 4
 
 [node name="hp2" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="1"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
-texture = ExtResource("5_pbjsr")
+texture = ExtResource("7_gy5d4")
 expand_mode = 4
 
 [node name="hp3" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="2"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
-texture = ExtResource("5_pbjsr")
+texture = ExtResource("7_gy5d4")
 expand_mode = 4
 
 [node name="hp4" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="3"]
 custom_minimum_size = Vector2(22, 0)
 layout_mode = 2
-texture = ExtResource("5_pbjsr")
+texture = ExtResource("7_gy5d4")
 expand_mode = 4
 
 [node name="throwing_star_icon" type="TextureRect" parent="CanvasLayer/MarginContainer/HBoxContainer" index="4"]

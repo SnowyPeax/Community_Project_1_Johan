@@ -6,6 +6,7 @@ var hp = 16
 
 
 func damage(x):
+	$AnimationPlayer.play("hit")
 	hp -= x
 	update_hp()
 	
