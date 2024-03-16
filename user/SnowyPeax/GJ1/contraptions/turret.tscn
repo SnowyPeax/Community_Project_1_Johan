@@ -7,6 +7,21 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o7hos"]
 size = Vector2(10, 26)
 
+[sub_resource type="Animation" id="Animation_1uk5w"]
+resource_name = "player_gone"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.709804, 0.560784, 1, 1), Color(1, 1, 1, 1)]
+}
+
 [sub_resource type="Animation" id="Animation_yk421"]
 resource_name = "spot_player"
 length = 2.0
@@ -35,21 +50,6 @@ tracks/1/keys = {
 "args": [],
 "method": &"fire"
 }]
-}
-
-[sub_resource type="Animation" id="Animation_1uk5w"]
-resource_name = "player_gone"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.3, 0.9),
-"transitions": PackedFloat32Array(1, 1, 1),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(0.709804, 0.560784, 1, 1), Color(1, 1, 1, 1)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_j7lyl"]
