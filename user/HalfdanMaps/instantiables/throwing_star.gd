@@ -15,4 +15,5 @@ func _on_timer_timeout():
 
 
 func _on_body_entered(body):
-	pass # Replace with function body.
+	if body.get_collision_layer_value():
+		pass
