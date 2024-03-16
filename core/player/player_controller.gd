@@ -11,8 +11,6 @@ class_name player
 @export var friction = 10
 @export var fastfallmult = 1.5
 @export var medfallmult = 1.15
-var screenToggle_timer = 0.0
-var screenToggle_duration = 0.1
 
 @onready var feet = $Feet
 @export var back : Marker2D
@@ -34,14 +32,6 @@ func _process(delta):
 	apply_physics(delta)
 	move_and_slide()
 
-	if screenToggle_timer >= 0:
-		screenToggle_timer -= delta
-	if Input.is_action_just_pressed("custom_toggle_fullscreen") and DisplayServer.window_get_mode() == 3 and screenToggle_timer <= 0:	# Check if the key for toggling fullscreen/windowed is pressed
-		DisplayServer.window_set_mode(0)
-		screenToggle_timer = screenToggle_duration
-	if Input.is_action_just_pressed("custom_toggle_fullscreen") and DisplayServer.window_get_mode() == 0 and screenToggle_timer <= 0:	# Check if the key for toggling fullscreen/windowed is pressed
-		DisplayServer.window_set_mode(3)
-		screenToggle_timer = screenToggle_duration
 
 func apply_physics(delta):
 	if global_position.y > 500:

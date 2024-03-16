@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Levelmanager="*res://core/singletons/levelmanager.gd"
+Screenmanager="*res://core/singletons/screenmanager.gd"
 
 [display]
 
