@@ -69,10 +69,10 @@ sprite = ExtResource("9_sftfq")
 position = Vector2(-80, -24)
 
 [connection signal="body_entered" from="Autotiles/Spikes" to="Autotiles/Spikes" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@89424" to="Autotiles/@Area2D@89424" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@89425" to="Autotiles/@Area2D@89425" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@89426" to="Autotiles/@Area2D@89426" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@89427" to="Autotiles/@Area2D@89427" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@89428" to="Autotiles/@Area2D@89428" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@89429" to="Autotiles/@Area2D@89429" method="_on_body_entered" flags=18]
-[connection signal="body_entered" from="Autotiles/@Area2D@89430" to="Autotiles/@Area2D@89430" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@43571" to="Autotiles/@Area2D@43571" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@43572" to="Autotiles/@Area2D@43572" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@43573" to="Autotiles/@Area2D@43573" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@43574" to="Autotiles/@Area2D@43574" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@43575" to="Autotiles/@Area2D@43575" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@43576" to="Autotiles/@Area2D@43576" method="_on_body_entered" flags=18]
+[connection signal="body_entered" from="Autotiles/@Area2D@43577" to="Autotiles/@Area2D@43577" method="_on_body_entered" flags=18]

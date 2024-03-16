@@ -2,6 +2,8 @@ extends CharacterBody2D
 
 @export var health = 10
 @export var chase_speed = 100
+@export var ascend_speed = 100
+@export var friction = 1
 
 var player
 
@@ -11,6 +13,8 @@ func _ready():
 	$AnimationPlayer.play("fly")
 
 func _physics_process(delta):
+	velocity *= 1 - (friction * delta)
+	
 	move_and_slide()
 
 

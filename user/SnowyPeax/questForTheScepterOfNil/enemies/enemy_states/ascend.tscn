@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://66hom4iin2iq"]
+
+[ext_resource type="Script" path="res://user/SnowyPeax/questForTheScepterOfNil/enemies/enemy_states/ascend.gd" id="1_ifb77"]
+
+[node name="Ascend" type="Node"]
+script = ExtResource("1_ifb77")

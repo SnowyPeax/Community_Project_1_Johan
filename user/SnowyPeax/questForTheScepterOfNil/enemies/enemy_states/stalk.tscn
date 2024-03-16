@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://tj2jkt4hqatf"]
+
+[ext_resource type="Script" path="res://user/SnowyPeax/questForTheScepterOfNil/enemies/enemy_states/stalk.gd" id="1_wou70"]
+
+[node name="Stalk" type="Node"]
+script = ExtResource("1_wou70")

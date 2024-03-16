@@ -8,4 +8,4 @@ func _ready():
 
 func _on_area_2d_body_entered(body):
 	if body == player:
-		state_machine.change_to_state("Chase")
+		state_machine.change_to_state("Ascend")

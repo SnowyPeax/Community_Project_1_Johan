@@ -1,10 +1,11 @@
-[gd_scene load_steps=12 format=3 uid="uid://c4asio4hyfp13"]
+[gd_scene load_steps=13 format=3 uid="uid://c4asio4hyfp13"]
 
 [ext_resource type="Script" path="res://user/SnowyPeax/questForTheScepterOfNil/enemies/sniffer_bird.gd" id="1_1l6w1"]
 [ext_resource type="Texture2D" uid="uid://oo5gct40eh0" path="res://user/SnowyPeax/questForTheScepterOfNil/assets/enemies/SnifferBird (32x32).png" id="1_wu6ib"]
 [ext_resource type="PackedScene" uid="uid://dn7bffwf7cw3f" path="res://user/SnowyPeax/questForTheScepterOfNil/enemies/enemy_states/enemy_state_machine.tscn" id="3_ml34s"]
 [ext_resource type="PackedScene" uid="uid://c6pjgpt1hvk33" path="res://user/SnowyPeax/questForTheScepterOfNil/enemies/enemy_states/watch.tscn" id="4_hfq3f"]
 [ext_resource type="PackedScene" uid="uid://6bt544jd6g3e" path="res://user/SnowyPeax/questForTheScepterOfNil/enemies/enemy_states/chase.tscn" id="5_aiqje"]
+[ext_resource type="PackedScene" uid="uid://66hom4iin2iq" path="res://user/SnowyPeax/questForTheScepterOfNil/enemies/enemy_states/ascend.tscn" id="6_bohew"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_q1v3i"]
 radius = 8.0
@@ -86,6 +87,8 @@ default_state = NodePath("Watch")
 watch_area = NodePath("../../WatchArea")
 
 [node name="Chase" parent="EnemyStateMachine" instance=ExtResource("5_aiqje")]
+
+[node name="Ascend" parent="EnemyStateMachine" instance=ExtResource("6_bohew")]
 
 [node name="WatchArea" type="Area2D" parent="."]
 
