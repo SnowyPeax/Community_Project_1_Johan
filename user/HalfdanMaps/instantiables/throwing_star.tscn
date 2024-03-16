@@ -1,17 +1,39 @@
-[gd_scene load_steps=4 format=3 uid="uid://dqr3fmynvyong"]
+[gd_scene load_steps=8 format=3 uid="uid://dqr3fmynvyong"]
 
 [ext_resource type="Script" path="res://user/HalfdanMaps/instantiables/throwing_star.gd" id="1_kiotr"]
-[ext_resource type="Texture2D" uid="uid://cua55hjebi75r" path="res://icon.svg" id="1_okjtp"]
+[ext_resource type="PackedScene" uid="uid://c72lak84q4bir" path="res://user/HalfdanMaps/instantiables/throwing_star_collectable.tscn" id="2_c4foo"]
+[ext_resource type="Texture2D" uid="uid://lp4h1mkgy18n" path="res://user/HalfdanMaps/assets/throwing_star.png" id="4_dicjx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_vkggx"]
-radius = 4.0
+radius = 8.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rj6e3"]
+atlas = ExtResource("4_dicjx")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_srqgu"]
+atlas = ExtResource("4_dicjx")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ukxuq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rj6e3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_srqgu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 32.0
+}]
 
 [node name="ThrowingStar" type="Area2D"]
+collision_layer = 0
+collision_mask = 95
 script = ExtResource("1_kiotr")
-
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("1_okjtp")
+collectable = ExtResource("2_c4foo")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_vkggx")
@@ -20,6 +42,13 @@ shape = SubResource("CircleShape2D_vkggx")
 wait_time = 20.0
 one_shot = true
 autostart = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ukxuq")
+autoplay = "default"
+frame_progress = 0.804458
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

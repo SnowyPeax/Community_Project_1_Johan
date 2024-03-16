@@ -1,12 +1,8 @@
 extends Node2D
 
-
 @export var throwing_star : PackedScene
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
+@onready var player = get_parent()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -20,4 +16,8 @@ func _input(event):
 func throw():
 	var t = throwing_star.instantiate()
 	t.global_position = global_position
+	if player.dir != Vector2.ZERO:
+		t.direction = player.dir
+	else:
+		t.direction = Vector2.RIGHT * player.get_node("AnimatedSprite2D").scale.x
 	get_tree().root.add_child(t)
