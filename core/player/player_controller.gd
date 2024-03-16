@@ -32,6 +32,7 @@ func _process(delta):
 	apply_physics(delta)
 	move_and_slide()
 
+
 func apply_physics(delta):
 	if global_position.y > 500:
 		die()
